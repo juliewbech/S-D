@@ -51,3 +51,19 @@
   font-weight: weight;
   font-style: normal;
 }
+
+.beige-bg {
+  background: #ebdfd3;
+}
+
+.orange {
+  color: #b96942;
+}
+
+.beige {
+  color: #dcb488;
+}
+
+.green {
+  color: #7f8459;
+}
