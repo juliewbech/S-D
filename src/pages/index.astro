@@ -38,14 +38,25 @@ import "../styles/tobii.min.css";
 		</section>
 		  
 
+
 		<section class="max-w-xl mx-auto mt-32 prose" id="manchet">
-			<p class="text-xl quicksand">Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt. Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
-			<div >
-				<a href="pierre.jpeg" class="lightbox" >
-					<Image  src={pierre} alt=""  loading="lazy" class="not-prose opacity-0 timelineanimation" id="timelineanimationimage">
-					<figcaption>Pierre Falcke, selvportræt</figcaption>
-				</a>
-			</div>
+			<article><!-- containeren -->
+				<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/public/pierre.jpeg')" ></div><!-- sticky elementet -->
+				<div class="relative flex justify-end"><!-- relative elementet -->
+					<div class="flex flex-col w-full md:w-1/2 h-full gap-4 p-4 ">
+						<div class="bg-slate-100 p-4">
+							<p class="text-center">Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt. </p>
+						</div>
+						<div class="bg-slate-100 p-6">
+							<p class="text-center">Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året.</p>
+						</div>
+						<div class="bg-slate-100 p-6">
+							<p class="text-center">Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
+						</div>
+					</div>
+				</div>
+				<div class="h-[100vh]"></div><!-- afstandsstykket -->
+			</article>
 
 			<ul id="stagger">
 			<p class="text-2xl italic text-center bg-black p-8 text-white quicksand staggeranimation">
@@ -59,23 +70,27 @@ import "../styles/tobii.min.css";
 			</p>
 		</ul>
 		</section>
-		<section class="max-w-4xl mx-auto my-32 prose border border-double p-8 bg-[url(/2301.webp)] shadow-xl"  id="hvaderstockfotos">
-			<h2 class="text-2xl stick-regular">Hvad er stock-fotos?</h2>
-			<div class="grid grid-cols-3 gap-4">
-				<div>
-					<p class="quicksand">Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af aviser, til markedsføring og som indhold på websites. En licens til at bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af hvad de skal bruges til.</p>
-					<Image src={arbejde} alt="" />
-				</div>
-				<div>
-					<p class="quicksand">Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der billeder af en læge i hvid kittel med stetoskop om halsen på en meget hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller supportafdeling.</p>
-					<Image src={apoteket} alt="" />
-				</div> 
-				<div>
-					<p class="quicksand">Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men stock-foto branchen var én af de tidlige til at blive fuldt digitaliseret.</p>
+
+		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/doodle_bg.webp')" >
+			<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1">
+				<h2 class="text-2xl stick-regular">Hvad er stock-fotos?</h2>
+				<p>Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af aviser, til markedsføring og som indhold på websites. En licens til at bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af hvad de skal bruges til.</p>
+				<Image src={arbejde} alt="" />
+			</div>
+		</div>
+		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/doodle_bg_blue.webp')" >
+			<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1">
+				<p>Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der billeder af en læge i hvid kittel med stetoskop om halsen på en meget hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller supportafdeling.</p>
+				<Image src={apoteket} alt="" />
+			</div>
+			<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/doodle_bg_green.webp')" >
+				<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1">
+					<p>Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men stock-foto branchen var én af de tidlige til at blive fuldt digitaliseret.</p>
 					<Image src={godtarbejde} alt="" />
 				</div>
-			</div>
-		</section>
+		</div>
+
+
 		<section class="max-w-xl mx-auto mt-32 prose fotoinview" id="pierresberoemmelse">
 			<h2 class="text-4xl stick-regular orange">Pierres berømmelse</h2>
 			<p class="quicksand">Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film. Pierre fortsatte med at fotografere på film op gennem gymnasietiden.</p>
@@ -101,6 +116,25 @@ import "../styles/tobii.min.css";
 							<figcaption class="quicksand">Dobbelteksponering med Smena</figcaption>
 						</section> 
 				</div>
+
+
+	<article class=" mx-auto mt-32">
+		<div class="sticky top-1/4 mangeelementerinview grid grid-cols-5">
+			  <div class="p-8 orange-bg text-center text-white mangeelementer1"></div>
+			  <div class="mangeelementer2"><Image src={glitch} class="" alt=""></Image></div>
+			  <div class="p-8 green-bg text-center text-white mangeelementer3"></div>
+			  <div class="mangeelementer4"><Image src={overouticm} alt="" class="" /></div>
+			  <div class="p-8 blue-bg text-center text-white mangeelementer5"></div>
+			  <div class="mangeelementer6"><Image src={tyndfilm} alt="" class="" /></div>
+			  <div class="p-8 yellow-bg text-center text-white mangeelementer7"></div>
+			  <div class="mangeelementer8">	<Image src={smena} class="" alt=""></Image></div>
+			  <div class="p-8 orange-bg text-center text-white mangeelementer9"></div>
+			  <div class="mangeelementer10"><Image src={pierre} class="" alt=""></Image></div>
+		</div>
+		<div class="h-screen">
+		</div>
+		</article>  
+		
 			
 
 			<div class="max-w-xl mx-auto prose">
@@ -118,7 +152,7 @@ import "../styles/tobii.min.css";
 				<div>
 					<h3 class="text-xl stick-regular">Glitch art</h3>
 					<p class="quicksand">Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.</p>
-					<p></p>
+					
 				</div>
 				<div>
 					<h3 class="text-xl stick-regular">Lomografi</h3>
@@ -127,8 +161,9 @@ import "../styles/tobii.min.css";
 				</div>
 			</div>
 		</section>
-		<section id="nybegyndelse">
-			<div class="max-w-xl mx-auto my-32 prose">
+
+		<section id="nybegyndelse ">
+			<div class="max-w-xl mx-auto my-32 prose fotoinview">
 				<h2 class="text-4xl stick-regular orange">En ny begyndelse</h2>
 				<p class="quicksand">Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og studerer nu kunstfotografering på fotoskolen Fatamorgana. Han glæder sig over hver dags kunstneriske eksperimenter, og er for første gang i sit liv rigtig stolt af sit arbejde. Som Pierre selv udtrykker det: <span class="italic">“Det interessante ligger i fejlen. Et foto med masser af fejl er interessant. Jeg eksperimenterer med udstyr og teknik, og skaber nye visuelle udtryk. Det uperfekte er perfekt.”</span></p>
 			</div>
@@ -228,12 +263,42 @@ inView( ".fotoinview" , () =>{
     }
     )
 
-	/* Horisontal scroll sektion */
-	scroll(
+	/* Mange elementer der animerer ind */
+	inView( ".mangeelementerinview", () =>{
+	animate( ".mangeelementer1", { x: [-2000, 0 ], y: [-50, 0 ] }, { duration: 1 }) 
+	animate( ".mangeelementer2", { x: [-1500, 0 ], y: [-100, 0 ] }, { duration: 3 })
+	animate( ".mangeelementer3", { x: [-1000, 0 ], y: [-150, 0 ] }, { duration: 3 })
+	animate( ".mangeelementer4", { x: [1750, 0 ] }, { duration: 2 })
+	animate( ".mangeelementer5", { x: [-2000, 0 ], y: [-100, 0 ]  }, { duration: 1 })
+	animate( ".mangeelementer6", { x: [2000, 0 ] }, { duration: 2 })
+	animate( ".mangeelementer7", { x: [1500, 0 ], y: [50, 0 ] }, { duration: 3 })
+	animate( ".mangeelementer8", { x: [1000, 0 ], y: [150, 0 ] }, { duration: 2 })
+	animate( ".mangeelementer9", { x: [1500, 0 ], y: [0, 0 ] }, { duration: 1 })
+	animate( ".mangeelementer10", { x: [2000, 0 ] , y: [50, 0 ] }, { duration: 2 })
+	return () => {
+		animate( ".mangeelementer1", { x: [-2000, 0 ], y: [-50, 0 ] }, { duration: 1 }) 
+		animate( ".mangeelementer2", { x: [-1500, 0 ], y: [-100, 0 ] }, { duration: 3 })
+		animate( ".mangeelementer3", { x: [-1000, 0 ], y: [-150, 0 ] }, { duration: 3 })
+		animate( ".mangeelementer4", { x: [1750, 0 ] }, { duration: 2 })
+		animate( ".mangeelementer5", { x: [-2000, 0 ], y: [-100, 0 ]  }, { duration: 1 })
+		animate( ".mangeelementer6", { x: [2000, 0 ] }, { duration: 2 })
+		animate( ".mangeelementer7", { x: [1500, 0 ], y: [50, 0 ] }, { duration: 3 })
+		animate( ".mangeelementer8", { x: [1000, 0 ], y: [150, 0 ] }, { duration: 2 })
+		animate( ".mangeelementer9", { x: [1500, 0 ], y: [0, 0 ] }, { duration: 1 })
+		animate( ".mangeelementer10", { x: [2000, 0 ] , y: [50, 0 ] }, { duration: 2 })
+   		}
+  	})
+	
+		/* Horisontal scroll sektion */
+		scroll(
 	animate("#horisontalliste", {
 		transform: ["none", "translateX(-500vw)"]
 	}),
 	{ target: document.querySelector("#horisontalscrollsection") }
 	);
+
+	scroll(animate(".stickyparallax1", { y: [-300, 0] }), {
+		target: document.querySelector(".stickyparallax1"),
+	});
 
 	</script>
