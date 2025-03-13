@@ -23,11 +23,11 @@ import "../styles/tobii.min.css";
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
-
+<div class="progress-bar h-4 fixed w-full bg-gradient-to-r from-pink-500 to-yellow-300 left-0 origin-top-left top-0 right-0"></div>
 <MainLayout title="Titel">
 	<article class="p-4 md:p-0">
 		<section class="max-w-xl mx-auto mt-32 prose" id="titel">
-			<h2 class="text-6xl md:text-8xl text-center stick-regular orange">Uperfekt er perfekt</h2>
+			<h2 class="text-6xl md:text-8xl text-center stick-regular orange fotoinview">Uperfekt er perfekt</h2>
 		</section>
 		<section class="max-w-4xl mx-auto mt-32" id="herovideo">
 			<video width="1280" height="960" autoplay muted loop>
@@ -36,21 +36,23 @@ import "../styles/tobii.min.css";
 		</section>
 		<section class="max-w-xl mx-auto mt-32 prose" id="manchet">
 			<p class="text-xl quicksand">Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt. Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
-			<div>
-				<a href="pierre.jpeg" class="lightbox">
-					<Image src={pierre} alt="" class="not-prose"/>
+			<div >
+				<a href="pierre.jpeg" class="lightbox" >
+					<Image  src={pierre} alt=""  loading="lazy" class="not-prose opacity-0 timelineanimation" id="timelineanimationimage">
 					<figcaption>Pierre Falcke, selvportræt</figcaption>
 				</a>
 			</div>
-			<p class="text-2xl italic text-center bg-black p-8 text-white quicksand">
+			<ul id="stagger">
+			<p class="text-2xl italic text-center bg-black p-8 text-white quicksand staggeranimation">
 				Pierre sælger 2 millioner fotos om året
 			</p>
-			<p class="text-2xl italic text-center bg-black p-8 text-white quicksand">
+			<p class="text-2xl italic text-center bg-black p-8 text-white quicksand staggeranimation">
 				Det svarer til én fotolicens hvert 16. sekund
 			</p>
-			<p class="text-2xl italic text-center  bg-black p-8 text-white quicksand">
+			<p class="text-2xl italic text-center  bg-black p-8 text-white quicksand staggeranimation">
 				Du ser hans fotos ca. 2 gange om dagen
 			</p>
+		</ul>
 		</section>
 		<section class="max-w-4xl mx-auto my-32 prose border border-double p-8 bg-[url(/2301.webp)] shadow-xl"  id="hvaderstockfotos">
 			<h2 class="text-2xl stick-regular">Hvad er stock-fotos?</h2>
@@ -146,7 +148,7 @@ import "../styles/tobii.min.css";
 				<p class="quicksand">Som Pierre forklarer det: <span class="italic">“Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt.”</span></p>			
 				<div>
 					<a href="lidtifem-pierre-falcke.jpg" class="lightbox">
-						<Image src={lidtifem} alt="" class="not-prose" />
+						<Image src={lidtifem} alt="" class="not-prose inviewreturn"/>
 						<figcaption class="quicksand">Lidt i fem - ny bog af Pierre Falcke</figcaption>
 					</a>			
 				</div>
@@ -161,4 +163,50 @@ import "../styles/tobii.min.css";
 <script>
 	/* Import af Motion One bibliotek */
 	import { animate, stagger, inView, scroll } from "motion";
+
+//animationer her//
+
+animate( "body", { opacity: [ 0, 1] }, { duration: 2 })
+
+inView( ".fotoinview" , () =>{
+	animate( ".fotoinview", { x: [-2000, 0 ] }, { duration: 3 })
+	})
+	inView( "#stagger" , () =>{
+		animate(
+		"#stagger p",
+		{ opacity: [0, 1] },
+		{ 
+			delay: stagger(1, { startDelay: 1 })
+		}
+		)
+	})
+
+	inView( "#timelineanimationimage" , () =>{
+		const timelineanimation = [
+		[".timelineanimation", { opacity: 1 }, { duration: 5 }],
+		[".timelineanimation", { transform: "rotate(360deg)" }, { duration: 3 }],
+		[".timelineanimation", { transform: "scale(1.5)" }, { duration: 0.5 }],
+		[".timelineanimation", { transform: "scale(1)" }, { duration: 1 }],
+		[".timelineanimation", { opacity: 0.3 }, { duration: 5 }],
+		]
+		animate( timelineanimation, { duration: 10, repeat: 2 } );
+	})
+
+	inView( ".inviewreturn", (element) => {
+  	animate(
+      element,
+      { rotate: [180, 0] },
+      { delay: 1, duration: 2 },
+  	) 
+    return () => {
+      animate(
+       element,
+        { rotate: 180 }
+      )
+  	}
+	})  
+
+		/*Progress-baren/læseindikatoren */
+		scroll( animate(".progress-bar", { scaleX: [0, 1] }));
+
 	</script>
