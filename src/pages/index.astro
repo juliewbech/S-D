@@ -196,7 +196,30 @@ import "../styles/tobii.min.css";
 			</div>
 		</section>
 	</article>
-	<article> <div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/pierre.jpeg')"></div> <div class="relative flex justify-end"> <div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-4 p-4 "> <div class="bg-slate-100 "> <p class="text-center">Scrollende indhold 1</p> </div> <div class="bg-slate-100"> <p class="text-center">Scrollende indhold 2</p> </div> </div> </div> <div class="h-[100vh]"></div> </article>
+
+	<section class="relative h-[300vh]">
+		<!-- Sticky baggrund -->
+		<div class="sticky top-0 h-screen flex items-center justify-center">
+			<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/pierre.jpeg')"></div>
+		</div>
+	
+		<!-- Scrollende indhold -->
+		<div class="absolute top-0 left-0 w-full h-full flex flex-col items-end justify-center">
+			<div class="w-full md:w-1/2 space-y-16">
+				<div class="bg-slate-100 p-6 shadow-lg">
+					<p class="text-center">Scrollende indhold 1</p>
+				</div>
+				<div class="bg-slate-100 p-6 shadow-lg">
+					<p class="text-center">Scrollende indhold 2</p>
+				</div>
+				<div class="bg-slate-100 p-6 shadow-lg">
+					<p class="text-center">Scrollende indhold 3</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
 </MainLayout>
 <script is:inline src="/tobii.min.js"></script>
 <script defer>
