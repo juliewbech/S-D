@@ -45,13 +45,13 @@ import "../styles/tobii.min.css";
 				<div class="relative flex justify-end"><!-- relative elementet -->
 					<div class="flex flex-col w-full md:w-1/2 h-full gap-4 p-4 ">
 						<div class="bg-slate-100 p-4">
-							<p class="text-center">Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt. </p>
+							<p class="quicksand">Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt. </p>
 						</div>
-						<div class="bg-slate-100 p-6">
-							<p class="text-center">Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året.</p>
+						<div class="bg-slate-100 p-6 quicksand">
+							<p class="">Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året.</p>
 						</div>
-						<div class="bg-slate-100 p-6">
-							<p class="text-center">Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
+						<div class="bg-slate-100 p-6 quicksand">
+							<p class="">Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
 						</div>
 					</div>
 				</div>
@@ -59,13 +59,13 @@ import "../styles/tobii.min.css";
 			</article>
 
 			<ul id="stagger">
-			<p class="text-2xl italic text-center bg-black p-8 text-white quicksand staggeranimation">
+			<p class="text-2xl italic text-center orange-bg p-8 text-white quicksand staggeranimation">
 				Pierre sælger 2 millioner fotos om året
 			</p>
-			<p class="text-2xl italic text-center bg-black p-8 text-white quicksand staggeranimation">
+			<p class="text-2xl italic text-center orange-bg p-8 text-white quicksand staggeranimation">
 				Det svarer til én fotolicens hvert 16. sekund
 			</p>
-			<p class="text-2xl italic text-center  bg-black p-8 text-white quicksand staggeranimation">
+			<p class="text-2xl italic text-center orange-bg p-8 text-white quicksand staggeranimation">
 				Du ser hans fotos ca. 2 gange om dagen
 			</p>
 		</ul>
@@ -73,7 +73,7 @@ import "../styles/tobii.min.css";
 
 		<section>
 		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/doodle_bg.webp')" >
-			<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1">
+			<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1 quicksand">
 				<h2 class="text-2xl stick-regular">Hvad er stock-fotos?</h2>
 				<p>Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af aviser, til markedsføring og som indhold på websites. En licens til at bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af hvad de skal bruges til.</p>
 				<Image src={arbejde} alt="" />
@@ -82,14 +82,14 @@ import "../styles/tobii.min.css";
 	</section>
 	<section>
 		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/doodle_bg_blue.webp')" >
-			<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1">
+			<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1 quicksand">
 				<p>Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der billeder af en læge i hvid kittel med stetoskop om halsen på en meget hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller supportafdeling.</p>
 				<Image src={apoteket} alt="" />
 			</div>
 		</section>
 		<section>
 			<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/doodle_bg_green.webp')" >
-				<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1">
+				<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1 quicksand">
 					<p>Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men stock-foto branchen var én af de tidlige til at blive fuldt digitaliseret.</p>
 					<Image src={godtarbejde} alt="" />
 				</div>
@@ -113,18 +113,9 @@ import "../styles/tobii.min.css";
 				<p class="quicksand">Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed. Pierre bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne.</p>
 				<p class="quicksand">Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt element i det at tage billeder.</p>
 			</div>
-			<div class="gap-4 max-w-4xl mx-auto my-8 items-center prose">
-				<section class="scrollzoom overflow-clip">
-					<Image src={glitch} class="scrollzoomimg w-full" alt="">
-						<figcaption class="quicksand">Glitch kunst</figcaption>
-					</section> 
-					<section class="scrollzoom overflow-clip">
-						<Image src={smena} class="scrollzoomimg w-full" alt="">
-							<figcaption class="quicksand">Dobbelteksponering med Smena</figcaption>
-						</section> 
-				</div>
+		</section>
 
-
+<section>
 	<article class=" mx-auto mt-32">
 		<div class="sticky top-1/4 mangeelementerinview grid grid-cols-5">
 			  <div class="p-8 orange-bg text-center text-white mangeelementer1"></div>
@@ -141,13 +132,16 @@ import "../styles/tobii.min.css";
 		<div class="h-screen">
 		</div>
 		</article>  
-		
+	</section>
 			
-
-			<div class="max-w-xl mx-auto prose">
-				<p class="quicksand">Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på rekordtid.</p>
-			</div>
+        <section>
+			<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/doodle_bg.webp')" >
+				<div class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1 quicksand">
+					<p>Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på rekordtid.</p>
+				</div>
+		</div>
 		</section>
+		
 		<section class="max-w-4xl mx-auto my-32 prose border border-double p-8 bg-[url(/2301.webp)] shadow-xl" id="fotoeksperimenter">
 			<h2 class="text-2xl stick-regular">Fotoeksperimenter</h2>
 			<div class="grid grid-cols-3 gap-4">
@@ -168,6 +162,13 @@ import "../styles/tobii.min.css";
 				</div>
 			</div>
 		</section>
+
+		<div class="gap-4 max-w-4xl mx-auto my-8 items-center prose">
+			<section class="scrollzoom overflow-clip">
+				<Image src={glitch} class="scrollzoomimg w-full" alt="">
+					<figcaption class="quicksand">Glitch kunst</figcaption>
+				</section> 
+			</div>
 
 		<section id="nybegyndelse ">
 			<div class="max-w-xl mx-auto my-32 prose fotoinview">
