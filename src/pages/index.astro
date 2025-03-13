@@ -57,6 +57,7 @@ import "../styles/tobii.min.css";
 				</div>
 				<div class="h-[100vh]"></div><!-- afstandsstykket -->
 			</article>
+		</section>
 
 			<ul id="stagger">
 			<p class="text-2xl italic text-center orange-bg p-8 text-white quicksand staggeranimation">
@@ -69,7 +70,7 @@ import "../styles/tobii.min.css";
 				Du ser hans fotos ca. 2 gange om dagen
 			</p>
 		</ul>
-		</section>
+		
 
 		<section>
 		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/doodle_bg.webp')" >
@@ -163,10 +164,9 @@ import "../styles/tobii.min.css";
 			</div>
 		</section>
 
-		<div class="gap-4 max-w-4xl mx-auto my-8 items-center prose">
-			<section class="scrollzoom overflow-clip">
+		<div class="" id="timelineanimationimage">
+			<section class="timelineanimation ">
 				<Image src={glitch} class="scrollzoomimg w-full" alt="">
-					<figcaption class="quicksand">Glitch kunst</figcaption>
 				</section> 
 			</div>
 
@@ -175,20 +175,12 @@ import "../styles/tobii.min.css";
 				<h2 class="text-4xl stick-regular orange">En ny begyndelse</h2>
 				<p class="quicksand">Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og studerer nu kunstfotografering på fotoskolen Fatamorgana. Han glæder sig over hver dags kunstneriske eksperimenter, og er for første gang i sit liv rigtig stolt af sit arbejde. Som Pierre selv udtrykker det: <span class="italic">“Det interessante ligger i fejlen. Et foto med masser af fejl er interessant. Jeg eksperimenterer med udstyr og teknik, og skaber nye visuelle udtryk. Det uperfekte er perfekt.”</span></p>
 			</div>
-			<div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto my-8 items-center prose">
-				<div>
-					<a href="over-out-icm.jpeg" class="lightbox">
-						<Image src={overouticm} alt="" class="not-prose" />
-						<figcaption class="quicksand">Overeksponeret og ude af fokus</figcaption>
-					</a>	
+		
+			<div class="gap-4 max-w-4xl mx-auto my-8 items-center prose">
+				<section class="scrollzoom overflow-clip">
+					<Image src={tyndfilm} class="scrollzoomimg w-full" alt="">
+					</section> 
 				</div>
-				<div>
-					<a href="tynd-film.jpg" class="lightbox">
-						<Image src={tyndfilm} alt="" class="not-prose" />
-						<figcaption class="quicksand" >Tynd film</figcaption>
-					</a>
-				</div>
-			</div>
 			<div class="max-w-xl mx-auto my-32 prose">
 				<p class="quicksand">Karrieren begynder også så småt også at gå den rette vej: Pierre er begyndt at sælge fotokunst på nettet, og har udgivet sin første foto-bog med titlen “Lidt i fem,” som er en fotografisk odyssé om at slæbe en brandert hjem i de tidlige morgentimer. I forbindelse med udgivelsen af bogen, har han en udstilling på vej i det Kongelige Biblioteks fotoudstilling.</p>
 				<p class="quicksand">Som Pierre forklarer det: <span class="italic">“Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt.”</span></p>			
@@ -308,5 +300,15 @@ inView( ".fotoinview" , () =>{
 	scroll(animate(".stickyparallax1", { y: [-300, 0] }), {
 		target: document.querySelector(".stickyparallax1"),
 	});
+
+	scroll(
+    animate(".scrollzoomimg", { 
+        scale: [1, 1.5]    
+    }),
+    { 
+      target: document.querySelector(".scrollzoom"),
+      offset: ["0.75 end", "end end"]
+    }
+    )
 
 	</script>
